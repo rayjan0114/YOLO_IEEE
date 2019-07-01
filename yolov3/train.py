@@ -315,7 +315,7 @@ if __name__ == '__main__':
     parser.add_argument('--nosave', action='store_true', help='only save final checkpoint')
     parser.add_argument('--notest', action='store_true', help='only test final epoch')
     parser.add_argument('--giou', default=True, help='use GIoU loss instead of xy, wh loss')
-    parser.add_argument('--evolve', action='store_true', help='run hyperparameter evolution')
+    parser.add_argument('--evolve', default=True, help='run hyperparameter evolution')
     parser.add_argument('--var', default=0, type=int, help='debug variable')
     opt = parser.parse_args()
     print(opt)
