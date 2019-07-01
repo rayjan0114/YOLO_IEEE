@@ -8,7 +8,7 @@
 **Resume Training:** `python3 train.py --resume` to resume training from `weights/latest.pt`.
 
 # IEEE
-  Download the coco images from IEEEMMSP:
+  Download the IEEE images from IEEEMMSP:
   ```
   IEEE
   ├── lables──<unzip the labels here>
