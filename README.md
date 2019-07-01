@@ -7,7 +7,7 @@
 
 **Resume Training:** `python3 train.py --resume` to resume training from `weights/latest.pt`.
 
-**IEEE**:
+# IEEE
   Download the coco images from IEEEMMSP:
   ```
   IEEE
