@@ -6,3 +6,13 @@
 **Start Training:** `python3 train.py` to begin training after downloading COCO data with `data/get_coco_dataset.sh`.
 
 **Resume Training:** `python3 train.py --resume` to resume training from `weights/latest.pt`.
+
+**IEEE**:
+  Download the coco images from IEEEMMSP:
+  ```
+  IEEE
+  ├── lables──<unzip the labels here>
+  │   
+  └── images
+      └── all──<put all the images here>
+  
