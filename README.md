@@ -3,7 +3,7 @@
 
 # Training
 
-**Start Training:** `python3 train.py` to begin training after downloading COCO data with `data/get_coco_dataset.sh`.
+**Start Training:** `python3 train.py`.
 
 **Resume Training:** `python3 train.py --resume` to resume training from `weights/latest.pt`.
 
