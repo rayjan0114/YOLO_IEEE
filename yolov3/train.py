@@ -299,7 +299,7 @@ def print_mutation(hyp, results):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--epochs', type=int, default=300, help='number of epochs')
-    parser.add_argument('--batch-size', type=int, default=10, help='batch size')
+    parser.add_argument('--batch-size', type=int, default=16, help='batch size')
     parser.add_argument('--accumulate', type=int, default=8, help='number of batches to accumulate before optimizing')
     parser.add_argument('--cfg', type=str, default='cfg/yolov3-IEEEspp.cfg', help='cfg file path')
     parser.add_argument('--data-cfg', type=str, default='data/IEEE.data', help='coco.data file path')
@@ -315,7 +315,7 @@ if __name__ == '__main__':
     parser.add_argument('--nosave', action='store_true', help='only save final checkpoint')
     parser.add_argument('--notest', action='store_true', help='only test final epoch')
     parser.add_argument('--giou', default=True, help='use GIoU loss instead of xy, wh loss')
-    parser.add_argument('--evolve', default=True, help='run hyperparameter evolution')
+    parser.add_argument('--evolve', action='store_true', help='run hyperparameter evolution')
     parser.add_argument('--var', default=0, type=int, help='debug variable')
     opt = parser.parse_args()
     print(opt)
