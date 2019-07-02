@@ -157,7 +157,7 @@ class LoadImagesAndLabels(Dataset):  # for training/testing
             from PIL import Image
 
             # Read image shapes
-            sp = 'data' + os.sep + path.replace('.txt', '.shapes').split(os.sep)[-1]  # shapefile path
+            sp = 'data' + '/' + path.replace('.txt', '.shapes').split('/')[-1]  # shapefile path
             if os.path.exists(sp):  # read existing shapefile
                 with open(sp, 'r') as f:
                     s = np.array([x.split() for x in f.read().splitlines()], dtype=np.float32)
@@ -210,7 +210,7 @@ class LoadImagesAndLabels(Dataset):  # for training/testing
                                 h, w, _ = img.shape
                                 for j, x in enumerate(l):
                                     f = '%s%sclassification%s%g_%g_%s' % (
-                                        p.parent.parent, os.sep, os.sep, x[0], j, p.name)
+                                        p.parent.parent, '/', '/', x[0], j, p.name)
                                     if not os.path.exists(Path(f).parent):
                                         os.makedirs(Path(f).parent)  # make new output folder
                                     box = xywh2xyxy(x[1:].reshape(-1, 4)).ravel()
@@ -446,7 +446,7 @@ def random_affine(img, targets=(), degrees=(-10, 10), translate=(.1, .1), scale=
 def convert_images2bmp():
     # cv2.imread() jpg at 230 img/s, *.bmp at 400 img/s
     for path in ['../coco/images/val2014/', '../coco/images/train2014/']:
-        folder = os.sep + Path(path).name
+        folder = '/' + Path(path).name
         output = path.replace(folder, folder + 'bmp')
         if os.path.exists(output):
             shutil.rmtree(output)  # delete output folder
