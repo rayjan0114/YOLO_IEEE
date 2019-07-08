@@ -11,8 +11,9 @@
   Download the IEEE images from IEEEMMSP:
   ```
   IEEE
-  ├── lables──<unzip the labels here>
-  │   
+  ├── lables
+  │   └── all──<put all the images here>
+  │
   └── images
       └── all──<put all the images here>
   
