@@ -7,6 +7,8 @@
 
 **Resume Training:** `python3 train.py --resume` to resume training from `weights/latest.pt`.
 
+**Model:**  https://github.com/rayjan0114/yolov3-spp-tiny.git
+
 # IEEE
   Download the IEEE images from IEEEMMSP:
   ```
